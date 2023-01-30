@@ -1,6 +1,6 @@
 resource "aws_instance" "web-server-for-app01" {
   ami           = var.AMIS[var.AWS_REGION]
-  instance_type = "t2.large"
+  instance_type = "t2.medium"
 
   # the VPC subnet  --> public-sub-1c
   subnet_id = "subnet-08df9070c27cc7b6f"
