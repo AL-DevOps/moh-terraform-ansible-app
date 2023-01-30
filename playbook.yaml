@@ -1,0 +1,21 @@
+---
+  - name: Ansible Playbook to Install and Setup Apache on Ubuntu
+    hosts: web_servers
+    become: yes
+    tasks:
+       - name: Install latest version of Apache
+         apt: name=apache2 update_cache=yes state=latest
+  # name: 'play1'
+      #hosts: web_servers
+      #tasks:
+      #-
+      #         name: 'install apache on the web servers'
+      #   yum:
+      #      name: httpd
+      #      state: latest
+      #-
+      #   name: 'start apache'
+      #   service:
+      #     name: httpd
+      #     state: started
+      #     enabled: yes
