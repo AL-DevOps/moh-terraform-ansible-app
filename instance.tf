@@ -16,6 +16,14 @@ resource "aws_instance" "web-server-for-app01" {
     Name = "andrey-web-app01"
   }
 
+    # Creating test_IPs.txt file for TEST
+   provisioner "local-exec" {
+     command = <<EOF
+       echo ${aws_instance.web-server-for-app01.private_ip}>> test_IPs.txt
+       echo ${aws_instance.web-server-for-app01.public_ip}>> test_IPs.txt
+     EOF
+  }
+  
   # Creating claster_name.txt file for deployment.yaml
    provisioner "local-exec" {
      command = <<EOF
