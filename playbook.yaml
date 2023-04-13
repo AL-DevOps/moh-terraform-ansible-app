@@ -13,7 +13,7 @@
 
     handlers:
        - name: restart apache2
-           service: name=apache2 state=restarted     
+         service: name=apache2 state=restarted     
       
   # name: 'play1'
       #hosts: web_servers
