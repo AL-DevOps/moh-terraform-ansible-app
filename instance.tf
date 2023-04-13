@@ -9,7 +9,7 @@ resource "aws_instance" "web-server-for-app01" {
   vpc_security_group_ids = ["sg-07a3bd50608f1e96e"]
 
   # the public SSH key
-  key_name = "key-virginia"
+  key_name = "key-virginia-ansible"
 
   # the server name in AWS
   tags = {
